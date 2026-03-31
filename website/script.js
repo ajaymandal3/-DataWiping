@@ -13,7 +13,7 @@
  */
 function downloadApp() {
     // Option 1: Direct download from GitHub Releases
-    const githubUrl = "https://github.com/YourUsername/DataWiping/releases/download/v1.0.0/SecureWipe-Setup-1.0.0.exe";
+    const githubUrl = "https://github.com/ajaymandal3/-DataWiping/releases/download/v1.0.0/SecureWipe%20Setup%201.0.0.exe";
     
     // Option 2: Download from your server
     // const downloadUrl = "/downloads/SecureWipe Setup 1.0.0.exe";
