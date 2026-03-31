@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: datawiping-site
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: ./website
+    pullRequestPreviewsEnabled: true
