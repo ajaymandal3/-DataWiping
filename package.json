@@ -1,0 +1,67 @@
+{
+  "name": "securewipe",
+  "version": "1.0.0",
+  "description": "Secure storage device wiper - pattern-based data destruction for Windows",
+  "main": "src/electron/main.js",
+  "homepage": "https://github.com/YourUsername/DataWiping",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YourUsername/DataWiping.git"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "scripts": {
+    "install": "node-gyp rebuild",
+    "build:addon": "node-gyp configure build",
+    "start": "electron .",
+    "dist": "electron-builder --win --x64",
+    "dist:dir": "electron-builder --win --x64 --dir",
+    "dist:portable": "electron-builder --win --x64 --win portable nsis"
+  },
+  "keywords": [
+    "electron",
+    "secure-wipe",
+    "data-destruction",
+    "privacy",
+    "disk-wipe",
+    "native-addon"
+  ],
+  "gypfile": true,
+  "productName": "SecureWipe",
+  "build": {
+    "appId": "com.securewipe.desktop",
+    "productName": "SecureWipe",
+    "files": [
+      "src/electron/**/*",
+      "src/renderer/**/*",
+      "build/Release/*.node",
+      "package.json"
+    ],
+    "directories": {
+      "output": "dist",
+      "buildResources": "src/electron/assets"
+    },
+    "win": {
+      "icon": "src/electron/assets/icon.ico",
+      "target": [
+        "nsis"
+      ],
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "SecureWipe"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^37.10.3",
+    "electron-builder": "^26.0.12",
+    "node-gyp": "^11.4.2"
+  }
+}
+

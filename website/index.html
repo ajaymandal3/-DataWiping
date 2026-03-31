@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SecureWipe - Professional data destruction tool for Windows. Securely wipe drives with multiple patterns.">
+    <meta name="theme-color" content="#1f2937">
+    <title>SecureWipe - Secure Data Destruction for Windows</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/ico" href="favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">🔐</span>
+                <span class="logo-text">SecureWipe</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#screenshots">Screenshots</a></li>
+                <li><a href="#download">Download</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>SecureWipe</h1>
+                <p class="subtitle">Professional Data Destruction for Windows</p>
+                <p class="description">
+                    Permanently erase sensitive data from storage devices with military-grade encryption patterns. 
+                    Protect your privacy with 9 different wipe methods.
+                </p>
+                <button class="cta-button" onclick="document.getElementById('download').scrollIntoView({behavior: 'smooth'})">
+                    Download Now
+                </button>
+                <p class="version-info">Version 1.0.0 • Windows 7+ (64-bit)</p>
+            </div>
+            <div class="hero-graphic">
+                <div class="icon-large">🔒</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Description -->
+    <section id="description" class="description">
+        <div class="container">
+            <h2>Why SecureWipe?</h2>
+            <div class="description-grid">
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Fast & Efficient</h3>
+                    <p>Compiled C code ensures maximum performance for large drives and quick operations.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🛡️</div>
+                    <h3>Military Grade</h3>
+                    <p>9 different wipe patterns including DoD 5220.22-M, Gutmann method, and random patterns.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h3>Real-time Progress</h3>
+                    <p>Monitor wipe progress in real-time with detailed statistics and speed metrics.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔍</div>
+                    <h3>Drive Detection</h3>
+                    <p>Automatically detects connected drives and prevents accidental system drive wipes.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📝</div>
+                    <h3>Audit Logging</h3>
+                    <p>Complete logging of all operations for compliance and verification purposes.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🎨</div>
+                    <h3>Dark Theme</h3>
+                    <p>Modern, clean interface with easy-to-read status indicators and controls.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Complete Feature List</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <h3>9 Wipe Methods</h3>
+                    <p>Standard, DoD, Gutmann, Shaw, RCMP, German Standard, Secure Shell, Random, and Custom patterns</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <h3>Multi-Pass Algorithm</h3>
+                    <p>Configurable passes for each pattern, from 1-pass quick wipe to 35-pass military secure</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <h3>Drive Selection</h3>
+                    <p>Select USB drives, external hard drives, or SSDs with safety checks to prevent system drive damage</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <h3>Admin Protection</h3>
+                    <p>Requires administrator privileges for dangerous operations to prevent accidental damage</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <h3>Live Statistics</h3>
+                    <p>Speed (MB/s), Progress %, Time Remaining, Total Data Written tracking</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <h3>Cancellable Operations</h3>
+                    <p>Stop wipe operations safely at any time without data corruption</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <h3>Pattern Comparison</h3>
+                    <p>Built-in guide explaining each wipe method and when to use it</p>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    <h3>Compliance Ready</h3>
+                    <p>Audit logs for HIPAA, GDPR, and other security compliance requirements</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wipe Methods Comparison -->
+    <section class="methods">
+        <div class="container">
+            <h2>Wipe Methods at a Glance</h2>
+            <div class="methods-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Method</th>
+                            <th>Passes</th>
+                            <th>Security Level</th>
+                            <th>Speed</th>
+                            <th>Use Case</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Standard</strong></td>
+                            <td>1</td>
+                            <td>Basic</td>
+                            <td>Fastest</td>
+                            <td>Quick cleanup</td>
+                        </tr>
+                        <tr>
+                            <td><strong>DoD 5220.22-M</strong></td>
+                            <td>3</td>
+                            <td>Military</td>
+                            <td>Fast</td>
+                            <td>Government approved</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gutmann</strong></td>
+                            <td>35</td>
+                            <td>Extreme</td>
+                            <td>Slowest</td>
+                            <td>Maximum security</td>
+                        </tr>
+                        <tr>
+                            <td><strong>RCMP</strong></td>
+                            <td>3</td>
+                            <td>Military</td>
+                            <td>Fast</td>
+                            <td>Canadian standard</td>
+                        </tr>
+                        <tr>
+                            <td><strong>German Standard</strong></td>
+                            <td>7</td>
+                            <td>High</td>
+                            <td>Medium</td>
+                            <td>German security</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section id="screenshots" class="screenshots">
+        <div class="container">
+            <h2>Screenshots</h2>
+            <p class="section-subtitle">Modern interface with real-time progress tracking</p>
+            <div class="screenshots-grid">
+                <div class="screenshot">
+                    <div class="screenshot-placeholder">
+                        <div class="placeholder-content">
+                            <span>📊</span>
+                            <p>Main Interface</p>
+                            <small>Select drives and wipe methods</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="screenshot">
+                    <div class="screenshot-placeholder">
+                        <div class="placeholder-content">
+                            <span>⏳</span>
+                            <p>Wipe Progress</p>
+                            <small>Real-time statistics and progress bar</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="screenshot">
+                    <div class="screenshot-placeholder">
+                        <div class="placeholder-content">
+                            <span>📋</span>
+                            <p>Audit Log</p>
+                            <small>Complete operation history</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="screenshot">
+                    <div class="screenshot-placeholder">
+                        <div class="placeholder-content">
+                            <span>⚙️</span>
+                            <p>Settings</p>
+                            <small>Pattern selection and preferences</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <h2>Download SecureWipe</h2>
+            <p class="section-subtitle">Choose your preferred download method</p>
+            
+            <div class="download-options">
+                <!-- Direct Download -->
+                <div class="download-card">
+                    <h3>📥 Direct Download</h3>
+                    <p class="file-size">SecureWipe Setup 1.0.0.exe • 75-100 MB</p>
+                    <button class="download-btn primary" onclick="downloadApp()">
+                        Download for Windows
+                    </button>
+                    <p class="download-note">Requires Windows 7 or later (64-bit)</p>
+                </div>
+
+                <!-- GitHub Release -->
+                <div class="download-card">
+                    <h3>🐙 GitHub Release</h3>
+                    <p class="file-size">Always up-to-date with latest version</p>
+                    <a href="https://github.com/YourUsername/DataWiping/releases" class="download-btn secondary" target="_blank">
+                        View on GitHub
+                    </a>
+                    <p class="download-note">Open source and transparent</p>
+                </div>
+
+                <!-- Portable Version -->
+                <div class="download-card">
+                    <h3>💾 Portable Version</h3>
+                    <p class="file-size">No installation required • 70-90 MB</p>
+                    <button class="download-btn" onclick="alert('Portable version available from GitHub releases')">
+                        Portable .EXE
+                    </button>
+                    <p class="download-note">Extract and run immediately</p>
+                </div>
+            </div>
+
+            <!-- System Requirements -->
+            <div class="system-requirements">
+                <h3>System Requirements</h3>
+                <div class="requirements-grid">
+                    <div class="requirement">
+                        <span class="req-icon">💻</span>
+                        <p><strong>OS:</strong> Windows 7, 8, 10, 11 (64-bit)</p>
+                    </div>
+                    <div class="requirement">
+                        <span class="req-icon">⚙️</span>
+                        <p><strong>Processor:</strong> 1 GHz or faster</p>
+                    </div>
+                    <div class="requirement">
+                        <span class="req-icon">💾</span>
+                        <p><strong>Storage:</strong> 100 MB free disk space</p>
+                    </div>
+                    <div class="requirement">
+                        <span class="req-icon">🔑</span>
+                        <p><strong>Admin Rights:</strong> Required to wipe drives</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Installation Steps -->
+            <div class="installation-steps">
+                <h3>Installation Steps</h3>
+                <ol class="steps">
+                    <li>
+                        <strong>Download the installer</strong>
+                        <p>Click "Download for Windows" button above</p>
+                    </li>
+                    <li>
+                        <strong>Run the installer</strong>
+                        <p>Execute SecureWipe Setup 1.0.0.exe</p>
+                    </li>
+                    <li>
+                        <strong>Follow wizard</strong>
+                        <p>Accept license, choose installation location, select shortcuts</p>
+                    </li>
+                    <li>
+                        <strong>Launch application</strong>
+                        <p>Find SecureWipe in Start Menu or Desktop</p>
+                    </li>
+                    <li>
+                        <strong>Verify installation</strong>
+                        <p>App should display normally without errors</p>
+                    </li>
+                </ol>
+            </div>
+
+            <!-- Version Info -->
+            <div class="version-details">
+                <h3>Version Information</h3>
+                <p><strong>Current Version:</strong> 1.0.0</p>
+                <p><strong>Release Date:</strong> April 1, 2026</p>
+                <p><strong>License:</strong> MIT (Open Source)</p>
+                <p><strong>Updates:</strong> Manual download from this page or GitHub Releases</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Report Issues & Feedback</h3>
+                    <p>Found a bug? Want to suggest a feature? We'd love to hear from you!</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <h4>🐙 GitHub Issues</h4>
+                            <p><a href="https://github.com/YourUsername/DataWiping/issues" target="_blank">
+                                Report bugs or request features
+                            </a></p>
+                        </div>
+                        <div class="contact-method">
+                            <h4>📧 Email</h4>
+                            <p><a href="mailto:support@example.com">
+                                support@example.com
+                            </a></p>
+                        </div>
+                        <div class="contact-method">
+                            <h4>🔗 GitHub</h4>
+                            <p><a href="https://github.com/YourUsername/DataWiping" target="_blank">
+                                View source code
+                            </a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <h3>Quick Feedback</h3>
+                    <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                        <input type="text" placeholder="Your name" required>
+                        <input type="email" placeholder="Your email" required>
+                        <textarea placeholder="Your message..." rows="5" required></textarea>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Is it safe to wipe my main drive?</h4>
+                    <p>No, SecureWipe has safety checks to prevent wiping system drives. Only external drives and USB devices can be wiped.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can data be recovered after wiping?</h4>
+                    <p>No, when using multiple-pass methods like Gutmann, data cannot be recovered even with forensic tools.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How long does wiping take?</h4>
+                    <p>Time depends on drive size and wipe method. 1-pass wipes are fastest; 35-pass Gutmann method is slowest.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Does it work with SSDs?</h4>
+                    <p>Yes, but TRIM commands make multiple-pass methods less effective. Use single-pass for SSDs.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Is this open source?</h4>
+                    <p>Yes! The entire project is open source under MIT license. Audit the code on GitHub.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Do you collect my data?</h4>
+                    <p>No analytics, no telemetry, no tracking. SecureWipe runs completely offline.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>SecureWipe</h4>
+                    <p>Professional data destruction tool for Windows</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#download">Download</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow</h4>
+                    <ul>
+                        <li><a href="https://github.com/YourUsername/DataWiping" target="_blank">GitHub</a></li>
+                        <li><a href="#" target="_blank">Twitter</a></li>
+                        <li><a href="#" target="_blank">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SecureWipe. Licensed under MIT.</p>
+                <p>Made with ❤️ for data privacy</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" class="scroll-top" onclick="scrollToTop()" title="Back to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

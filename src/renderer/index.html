@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SecureWipe Workflow</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <div class="backdrop-shape backdrop-one"></div>
+    <div class="backdrop-shape backdrop-two"></div>
+
+    <header class="app-header shell">
+      <div>
+        <p class="eyebrow">SecureWipe Operations Console</p>
+        <h1>Guided Erasure Workflow</h1>
+        <p class="sub">Three-step process with controls, telemetry, and compliance records.</p>
+      </div>
+      <div class="header-actions">
+        <button id="themeToggleBtn" class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="true">
+          <span class="theme-toggle-track">
+            <span class="theme-toggle-thumb"></span>
+          </span>
+          <span id="themeToggleLabel">Dark Mode</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="shell app-main">
+      <nav class="stepper" aria-label="Workflow Steps">
+        <button class="step-btn active" data-step="1">1. Configure</button>
+        <button class="step-btn" data-step="2">2. Execute</button>
+        <button class="step-btn" data-step="3">3. Reports</button>
+      </nav>
+
+      <section id="step-1" class="step-page active">
+        <article class="card">
+          <div class="row-between">
+            <h2>Configure Operation</h2>
+            <button id="refreshDisksBtn" class="ghost">Refresh Drives</button>
+          </div>
+          <p id="diskStatus" class="muted">Loading disks...</p>
+          <div class="grid-two">
+            <div>
+              <label for="driveSelect">Target Drive</label>
+              <select id="driveSelect"></select>
+            </div>
+            <div>
+              <label for="methodSelect">Wipe Method</label>
+              <select id="methodSelect"></select>
+              <p id="methodSuggestion" class="method-suggestion muted">Method suggestion will appear after selecting a drive.</p>
+            </div>
+          </div>
+          <label for="ackInput">Safety Phrase</label>
+          <input id="ackInput" type="text" placeholder="Type WIPE D:" />
+          <label class="terms-inline">
+            <input id="termsAgreeCheck" type="checkbox" />
+            <span>I confirm this is authorized and irreversible.</span>
+          </label>
+          <div class="actions">
+            <button id="toExecuteBtn">Continue to Execution</button>
+          </div>
+          <div id="diskList" class="list"></div>
+          <div id="methodCards" class="method-grid"></div>
+        </article>
+      </section>
+
+      <section id="step-2" class="step-page">
+        <article class="card">
+          <h2>Execute and Monitor</h2>
+          <p id="wipeStatus">No operation started.</p>
+          <div class="progress-wrap"><div id="progressBar" class="progress-bar" style="width: 0%"></div></div>
+          <p id="progressMeta" class="muted"></p>
+          <div class="actions">
+            <button id="startWipeBtn">Start Wipe</button>
+            <button id="cancelWipeBtn" class="danger">Cancel</button>
+            <button id="checkStatusBtn" class="ghost">Refresh Status</button>
+            <button id="toReportsBtn" class="ghost">Go to Reports</button>
+          </div>
+          <pre id="liveLog" class="console">Logs will appear here.</pre>
+        </article>
+      </section>
+
+      <section id="step-3" class="step-page">
+        <article class="card">
+          <div class="row-between">
+            <h2>Reports</h2>
+            <button id="getCertBtn">Get Certificate</button>
+          </div>
+          <pre id="certOutput" class="console">No certificate loaded.</pre>
+          <h3>Audit Timeline</h3>
+          <div id="auditList" class="list compact"></div>
+        </article>
+      </section>
+    </main>
+
+    <script src="./scripts/app.js"></script>
+  </body>
+</html>
